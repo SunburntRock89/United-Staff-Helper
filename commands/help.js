@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 exports.run = function(client, message, args) {
     const embed1 = new Discord.RichEmbed();
     const embed2 = new Discord.RichEmbed();
-    embed1.setTitle("Unites Staff Helper Help Menu")
-    .setDescription("These are all the commands in the Unites Staff Helper Discord Bot, enjoy! :wink:\n The prefix for Unites Staff Helper is `?`")
+    embed1.setTitle("United Staff Helper Help Menu")
+    .setDescription("These are all the commands in the United Staff Helper Discord Bot, enjoy! :wink:\n The prefix for United Staff Helper is `?`")
     .addField("about", "Posts an embed with a little bit of info about the bot. `?about`")
     .addField("ban", "Allows you to ban a specified user, with a reason. `?ban [user] [reason]`")
     .addField("help", "DMs you this help menu. `?help`")
@@ -16,7 +16,7 @@ exports.run = function(client, message, args) {
     .addField("slap", "Allows you to slap a specified user. `?slap [user]`")
     .setColor("#add8e6")
     .setThumbnail("https://cdn.discordapp.com/attachments/384749294042742785/384753378468823050/Unites_Staff_Helper_Avatar.png")
-    .setFooter("Be sure to DM Dan.#2518 or any other developer of Unites Staff Helper if you bump into any problems or glitches with the bot.")
+    .setFooter("Be sure to DM Dan.#2518 or any other developer of United Staff Helper if you bump into any problems or glitches with the bot.")
     message.author.send({embed: embed1});
 
     embed2.setTitle("Help!!")
