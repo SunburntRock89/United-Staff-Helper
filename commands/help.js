@@ -11,6 +11,8 @@ exports.run = function(client, message, args) {
     .addField("kick", "Allows you to kick a specified user, with a reason. `?kick [user] [reason]`")
     .addField("ping", "Pings the connection of the bot with a milliseconds value. `?ping`")
     .addField("warn", "Allows you to warn a user, with a reason. `?warn [user] [reason]`")
+    .addField("eval", "Allows you to evaluate Javascript code.`?eval [code]` ** MAINTAINER ONLY **")
+    .addField("cookie", ":cookie: !!! `?cookie`")
     .setColor("#add8e6")
     .setThumbnail("https://cdn.discordapp.com/attachments/384749294042742785/384753378468823050/Unites_Staff_Helper_Avatar.png")
     .setFooter("Be sure to DM Dan.#2518 or any other developer of Unites Staff Helper if you bump into any problems or glitches with the bot.")
