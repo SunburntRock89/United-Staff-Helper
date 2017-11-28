@@ -1,4 +1,4 @@
-# Unites Staff Helper
+# United Staff Helper
 ## A discord.js Discord bot made for the United Expeditions Discord Server.
 
 __Contributors__
