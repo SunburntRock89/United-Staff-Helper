@@ -13,6 +13,8 @@ Object.assign(String.prototype, {
 client.on('guildMemberAdd', member => {
     let logs = member.guild.channels.find('name', 'logs');
     let general = member.guild.channels.find('name', 'general');
+	if (!logs) return;
+	if (!general) return;
     general.send(`Welcome ${member}, have a good time!`);
     logs.send(`${member.user.username} has joined.`);
 })
@@ -20,6 +22,8 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member => {
     let logs = member.guild.channels.find('name', 'logs');
     let general = member.guild.channels.find('name', 'general');
+	if (!logs) return;
+	if (!general) return;
     general.send(`Goodbye ${member}, see you soon!`);
     logs.send(`${member.user.username} has left.`);
 })
