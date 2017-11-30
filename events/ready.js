@@ -1,3 +1,3 @@
 module.exports = client => {
-    console.log('Unites Staff Helper is online!');
+    console.log('United Staff Helper is online!');
 }
