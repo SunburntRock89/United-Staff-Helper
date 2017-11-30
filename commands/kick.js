@@ -5,6 +5,9 @@ exports.run = function(client, message, args) {
     const embed2 = new Discord.RichEmbed();
     let member = message.mentions.members.first();
     let reason = message.content.split(/\s+/g).slice(2).join(" ");
+    if (!(message.member.roles.has("376843322938884106"))) {
+        return message.channel.send(`**${message.author} You don't have enough permissions to run this command! :raised_hand:**`)
+    }
     if (message.mentions.users.size == 0) {
         return message.channel.send(`**${message.author} You need to mention a user! :angry:**`);
     }
