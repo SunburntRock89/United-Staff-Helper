@@ -8,6 +8,8 @@ exports.run = function(client, message, args) {
     .addField("Created At", message.guild.createdAt, true)
     .addField("Location", message.guild.region, true)
     .addField("Owner", message.guild.owner, true)
+    .addField("Member Count", message.guild.memberCount, true)
+    .addField("Large?", message.guild.large, true)
     .setThumbnail(message.guild.iconURL)
     .setColor("#add8e6")
     message.channel.send({embed});
