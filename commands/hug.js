@@ -1,35 +1,24 @@
-module.exports = {
-    usage: '[@user]',
-    description: 'Give someone a hug :blush:',
-    allowDM: true,
-    process: (bot, message) => {
-  
-      const hugReplies = [
-        '*hugs $USER*',
-        '*hugs $USER*',
-        '*hugs $USER*',
-        '*hugs $USER*',
-        '*licks $USER*',
-        '*pounces $USER*',
-        '*jumps on $USER*',
-        '*glomps $USER*',
-        '*falls on $USER*',
-        '*bear hugs $USER*',
-        '*tightly squeezes $USER*',
-        '*embraces $USER*',
-        '*holds $USER close*',
-        '*cuddles $USER*',
-        '*takes $USER into his arms*'
-      ];
-  
-      let user;
-  
-      if (message.mentions.users.first()) {
-        user = message.mentions.users.first();
-      } else {
-        user = message.author;
-      }
-  
-      message.channel.send(hugReplies[Math.floor(Math.random() * hugReplies.length)].replace('$USER', user));
-    }
-  };
+exports.run = function(client, message, args) {
+  let user = message.mentions.users.first();
+  const hugReplies = [
+    `*hugs ${user}*`,
+    `*hugs ${user}*`,
+    `*hugs ${user}*`,
+    `*hugs ${user}*`,
+    `*licks ${user}*`,
+    `*pounces ${user}*`,
+    `*jumps on ${user}*`,
+    `*glomps ${user}*`,
+    `*falls on ${user}*`,
+    `*bear hugs ${user}*`,
+    `*tightly squeezes ${user}*`,
+    `*embraces ${user}*`,
+    `*holds ${user} close*`,
+    `*cuddles ${user}*`,
+    `*takes ${user} into his arms*`
+  ];
+
+  let randomReply = Math.floor(Math.random() * hugReplies.length)
+
+  message.channel.send(hugReplies[randomReply]);
+}
